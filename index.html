@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bgchanger</title>
+</head>
+<style>
+    *{
+        padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .mouseclick{
+        padding-left: 20px;
+        cursor: pointer;
+        height: 45px;
+        width: 50%;
+        background-color: black;
+        color: white;
+        margin-top: 100px;
+        font-size: 1.5em;
+        border: 2px solid black;
+    }
+    @media (max-width: 1276px) {
+         
+
+        .mouseclick {
+            height: 170px;
+            width: 50%; /* Make button full width on smaller screens */
+            margin-top: 20px; /* Adjust spacing */
+            font-size: 1.5em;
+             
+        }
+    }
+
+</style>
+<body class="container">
+    
+    <button class="mouseclick">click here for randomly change the color of background</button>
+ 
+</body>
+<script>
+    const body=document.querySelector("body");
+    const tap=document.querySelector(".mouseclick");
+tap.addEventListener("click",()=>{
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    switch (randomNumber) {
+            case 1:
+            body.style.background="green";
+            body.style.color="white"
+            break;
+            case 2:
+            body.style.background="red";
+            body.style.color="white"
+            break;
+            case 3:
+            body.style.background="yellow";
+            body.style.color="red"
+            break;
+            case 4:
+            body.style.background="blue";
+            body.style.color="white"
+            break;
+            case 5:
+            body.style.background="grey";
+            body.style.color="white"
+            break;
+            case 6:
+            body.style.background="white";
+            body.style.color="black"
+            break;
+            case 7:
+            body.style.background="brown";
+            body.style.color="white"
+            break;
+            case 8:
+            body.style.background="gold";
+            body.style.color="black"
+            break;
+            case 9:
+            body.style.background="cyan";
+            body.style.color="black"
+            break;
+            default:
+            body.style.background="lime";
+            body.style.color="black"
+            break;
+    }
+})
+
+</script>
+</html>
